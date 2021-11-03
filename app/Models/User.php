@@ -44,11 +44,12 @@ class User extends Authenticatable
 
     public function path()
     {
-        return '/users/'. $this->id;
+       return '/users/'. $this->id;
     }
 
     public function contacts()
     {
         return $this->hasMany(Contact::class);
     }
+
 }

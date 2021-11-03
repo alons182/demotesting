@@ -4,6 +4,14 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 
+class Calculadora{
+
+    public function sumar($num1, $num2)
+    {
+        return $num1 + $num2;
+    }
+}
+
 class ExampleTest extends TestCase
 {
     /**
@@ -13,6 +21,8 @@ class ExampleTest extends TestCase
      */
     public function test_example()
     {
-        $this->assertTrue(true);
+        $cal = new Calculadora();
+
+        $this->assertEquals(10, $cal->sumar(5,5));
     }
 }
